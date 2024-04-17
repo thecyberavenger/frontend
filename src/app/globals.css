@@ -2,32 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+  --primary: #080808;
+  --foreground: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html, body{
+  background: var(--primary);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+*::-webkit-scrollbar {
+  background-color: rgb(21, 21, 21);
+  width: 8px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(72, 72, 72);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.hero-gradient::before {
+  content: "";
+  position: absolute;
+  top: -15rem;
+  width: 90%;
+  height: 30%;
+  background: #0061ffd6;
+  filter: blur(18rem);
+}
+
+.upcoming-cover {
+  height: 20rem;
+  position: absolute;
+  background: linear-gradient(to top, #090909, #090909f6, transparent);
+  transform: translateY(-20rem);
+  width: 100%;
+}
+
+.x-adjust{
+  @apply pt-16 pb-24 px-4 xsm:px-8 sm:px-12 md:px-20 lg:px-36 xl:px-48 2xl:px-64
 }
