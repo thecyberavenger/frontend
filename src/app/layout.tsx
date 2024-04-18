@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Join us in this shared exploration, where every click and collaboration contributes to a safer digital world. It's a journey crafted by human expertise for individuals seeking practical insights.",
     siteName: "The Cyber Avenger",
     images: [{
-      url: "https://github.com/thegovindrajput/frontend/blob/main/src/assets/images/og.jpg",
+      url: "https://raw.githubusercontent.com/thegovindrajput/frontend/main/src/assets/images/og.jpg",
     }],
   }
 
