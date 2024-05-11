@@ -6,6 +6,7 @@ import Image, { StaticImageData } from 'next/image'
 import AAIRON_MAN from '@/assets/images/aairon-man.jpg'
 import RAGHAV_BHAI from '@/assets/images/raghav-bhai.jpg'
 import ASHOKASEC from '@/assets/images/ashokasec.jpg'
+import TRIGGERX from '@/assets/images/triggerx.jpg'
 
     interface Member {
         name: string,
@@ -18,7 +19,7 @@ import ASHOKASEC from '@/assets/images/ashokasec.jpg'
         {
             name: "Govind Rajput",
             link: "https://www.linkedin.com/in/thegovindrajput/",
-            role: "Security Engineer",
+            role: "Penetration Tester",
             image: AAIRON_MAN
         },
         {
@@ -33,13 +34,19 @@ import ASHOKASEC from '@/assets/images/ashokasec.jpg'
             role: "Full-Stack Developer",
             image: ASHOKASEC
         },
+        {
+            name: "Arif Kolhar",
+            link: "https://www.linkedin.com/in/mohammad-arif-kolhar-63737a237/",
+            role: "Penetration Tester",
+            image: TRIGGERX
+        },
     ]
 
 const Team = () => {
     return (
         <>
             <SectionHeading section_name='Our Team' />
-            <div className='grid gap-3 grid-cols-1 sm:grid-cols-3 lg:px-24 2xl:px-36'>
+            <div className='grid gap-3 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 px-24 lg:px-12'>
                 {TeamData.map(({ name, link, role, image }, index) => (
                     <div className='bg-slate-500/10 border border-slate-400/20 rounded-xl w-full p-4 xl:p-4' key={index}>
                         <div className='flex flex-col'>
